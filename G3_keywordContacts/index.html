@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3-1 研究技術(關鍵詞)網絡</title>
+    <h3>3-1 研究技術(關鍵詞)網絡：「再生能源」領域研究技術網絡</h3>
+     
+	<!--import amCharts-->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script> 
+    <style>
+        #chartdiv {
+          width: 100%;
+          height: 550px;
+          max-width:100%;
+        }
+    </style>
+</head>
+
+<body>
+	<div id="chartdiv"></div>
+    
+    <!--function-->
+    <script>
+        am4core.ready(function() {
+
+        // Themes begin
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+        //chart.legend = new am4charts.Legend();
+        var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+
+        chart.data = [{    
+            name:'再生能源', 'value':40, 'neighbors':30, 'linkWidths':{
+                '風力發電':2.5,
+                '智慧電網':2.5,
+                '太陽能':2.5,
+                '儲能系統':2.5,
+                '風能':2.5,
+                '電動車':2.5,
+                '太陽能發電系統':2.5,
+                '微電網':2.5,
+                '分散式發電':2.5,
+                '溫室氣體':2.5,
+                '太陽能發電':2.5,
+                '溫室效應':2.5,
+                '需量反應':2.5,
+                '時間電價':2.5,
+                '成本效益分析':2.5,
+                '風力發電機':2.5,
+                '太陽光電':2.5,
+                '智慧家庭':2.5,
+                '節能減碳':2.5,
+                '地理資訊系統':2.5,
+                '太陽能電池':2.5,
+                '電池儲能系統':2.5,
+                '類神經網路':2.5,
+                '可靠度':2.5,
+                '太陽能熱水器':2.5,
+                '電力品質':2.5,
+                '電力潮流':2.5,
+                '全球暖化':2.5,
+                '虛擬電廠':2.5,
+                '能源政策':2.5
+            },
+            'children':[{
+                'name':'微電網', 'value':8, 'neighbors':16,
+                'link':['儲能系統', '智慧電網', '風力發電機', '電池儲能系統', '風力發電', '智慧家庭', '太陽能', '虛擬電廠', '需量反應', '時間電價', '類神經網路', '分散式發電', '電動車', '能源政策', '電力品質'], 
+                'linkWidths': {
+                    '儲能系統':0.8,
+                    '智慧電網':0.8,
+                    '風力發電機':0.8,
+                    '電池儲能系統':0.8,
+                    '風力發電':0.8,
+                    '智慧家庭':0.8,
+                    '太陽能':0.8,
+                    '虛擬電廠':0.8,
+                    '需量反應':0.8,
+                    '時間電價':0.8,
+                    '類神經網路':0.8,
+                    '分散式發電':0.8,
+                    '電動車':0.8,
+                    '能源政策':0.8,
+                    '電力品質':0.8
+                }
+            },{
+                'name':'電池儲能系統', 'value':5, 'neighbors':8,
+                'link':['微電網', '分散式發電', '智慧電網', '太陽能', '類神經網路', '需量反應', '成本效益分析'], 
+                'linkWidths': {
+                    '微電網':0.8,
+                    '分散式發電':0.8,
+                    '智慧電網':0.8,
+                    '太陽能':0.8,
+                    '類神經網路':0.8,
+                    '需量反應':0.8,
+                    '成本效益分析':0.8
+                }
+            },{
+                'name':'溫室效應', 'value':8, 'neighbors':11,
+                'link':['全球暖化', '溫室氣體', '節能減碳', '風力發電', '風力發電機', '智慧電網', '分散式發電', '地理資訊系統', '電力品質', '太陽能'], 
+                'linkWidths': {
+                    '全球暖化':0.8,
+                    '溫室氣體':0.8,
+                    '節能減碳':0.8,
+                    '風力發電':0.8,
+                    '風力發電機':0.8,
+                    '智慧電網':0.8,
+                    '分散式發電':0.8,
+                    '地理資訊系統':0.8,
+                    '電力品質':0.8,
+                    '太陽能':0.8
+                }
+            },{
+                'name':'太陽能', 'value':23, 'neighbors':22,
+                'link':['風能', '太陽能電池', '儲能系統', '類神經網路', '微電網', '成本效益分析', '風力發電', '電動車', '風力發電機', '太陽能發電', '太陽能熱水器', '節能減碳', '全球暖化', '太陽光電', '電池儲能系統', '可靠度', '需量反應', '分散式發電', '太陽能發電系統', '溫室效應', '溫室氣體'], 
+                'linkWidths': {
+                    '風能':0.8,
+                    '太陽能電池':0.8,
+                    '儲能系統':0.8,
+                    '類神經網路':0.8,
+                    '微電網':0.8,
+                    '成本效益分析':0.8,
+                    '風力發電':0.8,
+                    '電動車':0.8,
+                    '風力發電機':0.8,
+                    '太陽能發電':0.8,
+                    '太陽能熱水器':0.8,
+                    '節能減碳':0.8,
+                    '全球暖化':0.8,
+                    '太陽光電':0.8,
+                    '電池儲能系統':0.8,
+                    '可靠度':0.8,
+                    '需量反應':0.8,
+                    '分散式發電':0.8,
+                    '太陽能發電系統':0.8,
+                    '溫室效應':0.8,
+                    '溫室氣體':0.8
+                }
+            },{
+                'name':'溫室氣體', 'value':8, 'neighbors':8,
+                'link':['溫室效應', '全球暖化', '節能減碳', '風力發電機', '成本效益分析', '地理資訊系統', '太陽能'], 
+                'linkWidths': {
+                    '溫室效應':0.8,
+                    '全球暖化':0.8,
+                    '節能減碳':0.8,
+                    '風力發電機':0.8,
+                    '成本效益分析':0.8,
+                    '地理資訊系統':0.8,
+                    '太陽能':0.8
+                }
+            },{
+                'name':'風能', 'value':10, 'neighbors':7,
+                'link':['太陽能', '風力發電', '風力發電機', '電力品質', '太陽能熱水器', '節能減碳'], 
+                'linkWidths': {
+                    '太陽能':0.8,
+                    '風力發電':0.8,
+                    '風力發電機':0.8,
+                    '電力品質':0.8,
+                    '太陽能熱水器':0.8,
+                    '節能減碳':0.8
+                }
+            },{
+                'name':'太陽能發電系統', 'value':9, 'neighbors':12,
+                'link':['儲能系統', '類神經網路', '地理資訊系統', '全球暖化', '風力發電機', '太陽能', '太陽光電', '成本效益分析', '太陽能電池', '時間電價', '風力發電'], 
+                'linkWidths': {
+                    '儲能系統':0.8,
+                    '類神經網路':0.8,
+                    '地理資訊系統':0.8,
+                    '全球暖化':0.8,
+                    '風力發電機':0.8,
+                    '太陽能':0.8,
+                    '太陽光電':0.8,
+                    '成本效益分析':0.8,
+                    '太陽能電池':0.8,
+                    '時間電價':0.8,
+                    '風力發電':0.8
+                }
+            },{
+                'name':'節能減碳', 'value':6, 'neighbors':11,
+                'link':['全球暖化', '溫室氣體', '溫室效應', '智慧電網', '成本效益分析', '太陽能', '太陽能發電', '需量反應', '風能', '風力發電'], 
+                'linkWidths': {
+                    '全球暖化':0.8,
+                    '溫室氣體':0.8,
+                    '溫室效應':0.8,
+                    '智慧電網':0.8,
+                    '成本效益分析':0.8,
+                    '太陽能':0.8,
+                    '太陽能發電':0.8,
+                    '需量反應':0.8,
+                    '風能':0.8,
+                    '風力發電':0.8
+                }
+            },{
+                'name':'時間電價', 'value':7, 'neighbors':10,
+                'link':['電動車', '智慧電網', '儲能系統', '需量反應', '風力發電機', '微電網', '虛擬電廠', '太陽能發電', '太陽能發電系統'], 
+                'linkWidths': {
+                    '電動車':0.8,
+                    '智慧電網':0.8,
+                    '儲能系統':0.8,
+                    '需量反應':0.8,
+                    '風力發電機':0.8,
+                    '微電網':0.8,
+                    '虛擬電廠':0.8,
+                    '太陽能發電':0.8,
+                    '太陽能發電系統':0.8
+                }
+            },{
+                'name':'風力發電機', 'value':7, 'neighbors':15,
+                'link':['微電網', '儲能系統', '類神經網路', '時間電價', '太陽能電池', '溫室氣體', '風能', '太陽能發電', '太陽能', '溫室效應', '電力品質', '可靠度', '太陽能發電系統', '風力發電'], 
+                'linkWidths': {
+                    '微電網':0.8,
+                    '儲能系統':0.8,
+                    '類神經網路':0.8,
+                    '時間電價':0.8,
+                    '太陽能電池':0.8,
+                    '溫室氣體':0.8,
+                    '風能':0.8,
+                    '太陽能發電':0.8,
+                    '太陽能':0.8,
+                    '溫室效應':0.8,
+                    '電力品質':0.8,
+                    '可靠度':0.8,
+                    '太陽能發電系統':0.8,
+                    '風力發電':0.8
+                }
+            },{
+                'name':'智慧電網', 'value':24, 'neighbors':16,
+                'link':['電動車', '微電網', '需量反應', '智慧家庭', '儲能系統', '時間電價', '節能減碳', '電力潮流', '電力品質', '類神經網路', '電池儲能系統', '虛擬電廠', '溫室效應', '成本效益分析', '太陽能發電'], 
+                'linkWidths': {
+                    '電動車':0.8,
+                    '微電網':0.8,
+                    '需量反應':0.8,
+                    '智慧家庭':0.8,
+                    '儲能系統':0.8,
+                    '時間電價':0.8,
+                    '節能減碳':0.8,
+                    '電力潮流':0.8,
+                    '電力品質':0.8,
+                    '類神經網路':0.8,
+                    '電池儲能系統':0.8,
+                    '虛擬電廠':0.8,
+                    '溫室效應':0.8,
+                    '成本效益分析':0.8,
+                    '太陽能發電':0.8
+                }
+            },{
+                'name':'分散式發電', 'value':8, 'neighbors':9,
+                'link':['電池儲能系統', '太陽能發電', '電力潮流', '溫室效應', '微電網', '太陽能', '成本效益分析', '風力發電'], 
+                'linkWidths': {
+                    '電池儲能系統':0.8,
+                    '太陽能發電':0.8,
+                    '電力潮流':0.8,
+                    '溫室效應':0.8,
+                    '微電網':0.8,
+                    '太陽能':0.8,
+                    '成本效益分析':0.8,
+                    '風力發電':0.8
+                }
+            },{
+                'name':'能源政策', 'value':5, 'neighbors':5,
+                'link':['風力發電', '地理資訊系統', '微電網', '太陽光電'], 
+                'linkWidths': {
+                    '風力發電':0.8,
+                    '地理資訊系統':0.8,
+                    '微電網':0.8,
+                    '太陽光電':0.8
+                }
+            },{
+                'name':'全球暖化', 'value':5, 'neighbors':7,
+                'link':['溫室效應', '節能減碳', '溫室氣體', '太陽能', '太陽能發電系統', '類神經網路'], 
+                'linkWidths': {
+                    '溫室效應':0.8,
+                    '節能減碳':0.8,
+                    '溫室氣體':0.8,
+                    '太陽能':0.8,
+                    '太陽能發電系統':0.8,
+                    '類神經網路':0.8
+                }
+            },{
+                'name':'太陽光電', 'value':7, 'neighbors':8,
+                'link':['可靠度', '儲能系統', '太陽能', '風力發電', '電力品質', '太陽能發電系統', '能源政策'], 
+                'linkWidths': {
+                    '可靠度':0.8,
+                    '儲能系統':0.8,
+                    '太陽能':0.8,
+                    '風力發電':0.8,
+                    '電力品質':0.8,
+                    '太陽能發電系統':0.8,
+                    '能源政策':0.8
+                }
+            },{
+                'name':'智慧家庭', 'value':6, 'neighbors':6,
+                'link':['智慧電網', '需量反應', '微電網', '虛擬電廠', '電動車'], 
+                'linkWidths': {
+                    '智慧電網':0.8,
+                    '需量反應':0.8,
+                    '微電網':0.8,
+                    '虛擬電廠':0.8,
+                    '電動車':0.8
+                }
+            },{
+                'name':'類神經網路', 'value':5, 'neighbors':14,
+                'link':['電力品質', '可靠度', '地理資訊系統', '風力發電', '太陽能發電', '風力發電機', '太陽能', '微電網', '智慧電網', '太陽能發電系統', '太陽能電池', '電池儲能系統', '全球暖化'], 
+                'linkWidths': {
+                    '電力品質':0.8,
+                    '可靠度':0.8,
+                    '地理資訊系統':0.8,
+                    '風力發電':0.8,
+                    '太陽能發電':0.8,
+                    '風力發電機':0.8,
+                    '太陽能':0.8,
+                    '微電網':0.8,
+                    '智慧電網':0.8,
+                    '太陽能發電系統':0.8,
+                    '太陽能電池':0.8,
+                    '電池儲能系統':0.8,
+                    '全球暖化':0.8
+                }
+            },{
+                'name':'電力品質', 'value':5, 'neighbors':13,
+                'link':['類神經網路', '風力發電', '智慧電網', '電動車', '太陽能發電', '風力發電機', '風能', '太陽光電', '成本效益分析', '溫室效應', '可靠度', '微電網'], 
+                'linkWidths': {
+                    '類神經網路':0.8,
+                    '風力發電':0.8,
+                    '智慧電網':0.8,
+                    '電動車':0.8,
+                    '太陽能發電':0.8,
+                    '風力發電機':0.8,
+                    '風能':0.8,
+                    '太陽光電':0.8,
+                    '成本效益分析':0.8,
+                    '溫室效應':0.8,
+                    '可靠度':0.8,
+                    '微電網':0.8
+                }
+            },{
+                'name':'電力潮流', 'value':5, 'neighbors':6,
+                'link':['智慧電網', '風力發電', '分散式發電', '太陽能發電', '地理資訊系統'], 
+                'linkWidths': {
+                    '智慧電網':0.8,
+                    '風力發電':0.8,
+                    '分散式發電':0.8,
+                    '太陽能發電':0.8,
+                    '地理資訊系統':0.8
+                }
+            },{
+                'name':'虛擬電廠', 'value':5, 'neighbors':6,
+                'link':['需量反應', '智慧家庭', '微電網', '時間電價', '智慧電網'], 
+                'linkWidths': {
+                    '需量反應':0.8,
+                    '智慧家庭':0.8,
+                    '微電網':0.8,
+                    '時間電價':0.8,
+                    '智慧電網':0.8
+                }
+            },{
+                'name':'成本效益分析', 'value':7, 'neighbors':12,
+                'link':['節能減碳', '太陽能', '電動車', '溫室氣體', '儲能系統', '電力品質', '分散式發電', '太陽能發電', '智慧電網', '太陽能發電系統', '電池儲能系統'], 
+                'linkWidths': {
+                    '節能減碳':0.8,
+                    '太陽能':0.8,
+                    '電動車':0.8,
+                    '溫室氣體':0.8,
+                    '儲能系統':0.8,
+                    '電力品質':0.8,
+                    '分散式發電':0.8,
+                    '太陽能發電':0.8,
+                    '智慧電網':0.8,
+                    '太陽能發電系統':0.8,
+                    '電池儲能系統':0.8
+                }
+            },{
+                'name':'可靠度', 'value':5, 'neighbors':10,
+                'link':['類神經網路', '太陽光電', '需量反應', '太陽能電池', '太陽能', '風力發電機', '風力發電', '電動車', '電力品質'], 
+                'linkWidths': {
+                    '類神經網路':0.8,
+                    '太陽光電':0.8,
+                    '需量反應':0.8,
+                    '太陽能電池':0.8,
+                    '太陽能':0.8,
+                    '風力發電機':0.8,
+                    '風力發電':0.8,
+                    '電動車':0.8,
+                    '電力品質':0.8
+                }
+            },{
+                'name':'太陽能電池', 'value':6, 'neighbors':10,
+                'link':['太陽能', '風力發電機', '太陽能熱水器', '可靠度', '風力發電', '電動車', '類神經網路', '儲能系統', '太陽能發電系統'], 
+                'linkWidths': {
+                    '太陽能':0.8,
+                    '風力發電機':0.8,
+                    '太陽能熱水器':0.8,
+                    '可靠度':0.8,
+                    '風力發電':0.8,
+                    '電動車':0.8,
+                    '類神經網路':0.8,
+                    '儲能系統':0.8,
+                    '太陽能發電系統':0.8
+                }
+            },{
+                'name':'電動車', 'value':10, 'neighbors':13,
+                'link':['智慧電網', '儲能系統', '時間電價', '需量反應', '太陽能', '電力品質', '成本效益分析', '太陽能電池', '風力發電', '智慧家庭', '微電網', '可靠度'], 
+                'linkWidths': {
+                    '智慧電網':0.8,
+                    '儲能系統':0.8,
+                    '時間電價':0.8,
+                    '需量反應':0.8,
+                    '太陽能':0.8,
+                    '電力品質':0.8,
+                    '成本效益分析':0.8,
+                    '太陽能電池':0.8,
+                    '風力發電':0.8,
+                    '智慧家庭':0.8,
+                    '微電網':0.8,
+                    '可靠度':0.8
+                }
+            },{
+                'name':'地理資訊系統', 'value':6, 'neighbors':9,
+                'link':['類神經網路', '太陽能發電系統', '風力發電', '溫室效應', '溫室氣體', '能源政策', '電力潮流', '太陽能熱水器'], 
+                'linkWidths': {
+                    '類神經網路':0.8,
+                    '太陽能發電系統':0.8,
+                    '風力發電':0.8,
+                    '溫室效應':0.8,
+                    '溫室氣體':0.8,
+                    '能源政策':0.8,
+                    '電力潮流':0.8,
+                    '太陽能熱水器':0.8
+                }
+            },{
+                'name':'需量反應', 'value':7, 'neighbors':12,
+                'link':['智慧電網', '智慧家庭', '虛擬電廠', '時間電價', '電動車', '微電網', '儲能系統', '可靠度', '太陽能', '電池儲能系統', '節能減碳'], 
+                'linkWidths': {
+                    '智慧電網':0.8,
+                    '智慧家庭':0.8,
+                    '虛擬電廠':0.8,
+                    '時間電價':0.8,
+                    '電動車':0.8,
+                    '微電網':0.8,
+                    '儲能系統':0.8,
+                    '可靠度':0.8,
+                    '太陽能':0.8,
+                    '電池儲能系統':0.8,
+                    '節能減碳':0.8
+                }
+            },{
+                'name':'太陽能發電', 'value':8, 'neighbors':14,
+                'link':['風力發電', '類神經網路', '儲能系統', '分散式發電', '風力發電機', '電力品質', '太陽能', '節能減碳', '電力潮流', '成本效益分析', '時間電價', '太陽能熱水器', '智慧電網'], 
+                'linkWidths': {
+                    '風力發電':0.8,
+                    '類神經網路':0.8,
+                    '儲能系統':0.8,
+                    '分散式發電':0.8,
+                    '風力發電機':0.8,
+                    '電力品質':0.8,
+                    '太陽能':0.8,
+                    '節能減碳':0.8,
+                    '電力潮流':0.8,
+                    '成本效益分析':0.8,
+                    '時間電價':0.8,
+                    '太陽能熱水器':0.8,
+                    '智慧電網':0.8
+                }
+            },{
+                'name':'風力發電', 'value':29, 'neighbors':21,
+                'link':['太陽能發電', '電力品質', '類神經網路', '儲能系統', '微電網', '風能', '太陽能', '溫室效應', '電力潮流', '太陽能電池', '太陽能熱水器', '太陽光電', '能源政策', '地理資訊系統', '電動車', '可靠度', '風力發電機', '太陽能發電系統', '節能減碳', '分散式發電'], 
+                'linkWidths': {
+                    '太陽能發電':0.8,
+                    '電力品質':0.8,
+                    '類神經網路':0.8,
+                    '儲能系統':0.8,
+                    '微電網':0.8,
+                    '風能':0.8,
+                    '太陽能':0.8,
+                    '溫室效應':0.8,
+                    '電力潮流':0.8,
+                    '太陽能電池':0.8,
+                    '太陽能熱水器':0.8,
+                    '太陽光電':0.8,
+                    '能源政策':0.8,
+                    '地理資訊系統':0.8,
+                    '電動車':0.8,
+                    '可靠度':0.8,
+                    '風力發電機':0.8,
+                    '太陽能發電系統':0.8,
+                    '節能減碳':0.8,
+                    '分散式發電':0.8
+                }
+            },{
+                'name':'儲能系統', 'value':12, 'neighbors':14,
+                'link':['微電網', '電動車', '智慧電網', '風力發電機', '時間電價', '太陽能', '風力發電', '太陽能發電系統', '太陽能發電', '太陽光電', '需量反應', '太陽能電池', '成本效益分析'], 
+                'linkWidths': {
+                    '微電網':0.8,
+                    '電動車':0.8,
+                    '智慧電網':0.8,
+                    '風力發電機':0.8,
+                    '時間電價':0.8,
+                    '太陽能':0.8,
+                    '風力發電':0.8,
+                    '太陽能發電系統':0.8,
+                    '太陽能發電':0.8,
+                    '太陽光電':0.8,
+                    '需量反應':0.8,
+                    '太陽能電池':0.8,
+                    '成本效益分析':0.8
+                }
+            },{
+                'name':'太陽能熱水器', 'value':5, 'neighbors':7,
+                'link':['太陽能電池', '太陽能', '風力發電', '風能', '太陽能發電', '地理資訊系統'], 
+                'linkWidths': {
+                    '太陽能電池':0.8,
+                    '太陽能':0.8,
+                    '風力發電':0.8,
+                    '風能':0.8,
+                    '太陽能發電':0.8,
+                    '地理資訊系統':0.8
+                }
+            }]
+            
+        }];
+
+        // Set up data fields
+        networkSeries.dataFields.value = "value";
+        networkSeries.dataFields.name = "name";
+        networkSeries.dataFields.children = "children";
+        networkSeries.dataFields.id = "name";
+        networkSeries.dataFields.linkWith = "link";
+
+        networkSeries.minRadius = 22;
+        networkSeries.maxRadius = 35;
+        networkSeries.manyBodyStrength = -50;
+        networkSeries.dataFields.color = "color";
+        networkSeries.colors.list = [
+            am4core.color("#8888f1")
+        ];
+
+        networkSeries.nodes.template.fillOpacity = 0.85;
+        networkSeries.nodes.template.label.text = "{name}";
+        //networkSeries.nodes.template.label.hideOversized = true;
+        //networkSeries.nodes.template.label.truncate = true;
+        //networkSeries.nodes.template.label.wrap = true;
+        
+        networkSeries.nodes.template.label.adapter.add("fill", function(fill, target) {
+            return am4core.color("#000");
+        })
+        networkSeries.nodes.template.label.adapter.add("fontSize", function(fontSize, target) {
+            if (target.dataItem) {
+                switch(target.dataItem.level) {
+                case 0:
+                    return 18;
+                case 1:
+                    return 13;
+                }
+            }
+        });
+
+        //tooltip setting
+        networkSeries.tooltip.label.fill = am4core.color("#000");
+        networkSeries.tooltip.getFillFromObject = false;
+        networkSeries.tooltip.background.fill = am4core.color("#55a9f7");
+        networkSeries.tooltip.fontSize = 13;
+        networkSeries.nodes.template.adapter.add("tooltipText", function(text, target) {
+            if (target.dataItem) {
+                switch(target.dataItem.level) {
+                case 0:
+                    return "「[bold]{name}[/]與[bold]{neighbors}[/]個關鍵詞";
+                case 1:
+                    return "[bold]< {name} >[/]\n與[bold]{parent.name}[/]合作： [bold]{value}[/] 次\n相連關鍵詞：[bold]{neighbors}[/] 個";
+                }
+            }
+            return text;
+        });
+
+        //color setting
+        networkSeries.nodes.template.adapter.add("radius", function(radius, target) {
+            if (target.dataItem.level != 0) {
+                return target.dataItem.value;
+            }
+        });
+        networkSeries.nodes.template.circle.adapter.add("fill", function(fill, target) {
+            return am4core.color("#8888f1");
+        });
+        networkSeries.nodes.template.circle.adapter.add("stroke", function(fill, target) {
+            if (target.dataItem.level > 0) {
+                return am4core.color("#8888f1");
+            }
+        });        networkSeries.links.template.adapter.add("stroke", function(fill, target) {
+            return am4core.color("#8888f1");
+        });
+
+        networkSeries.links.template.strokeOpacity = 0.5;
+        networkSeries.links.template.strokeWidth = 0.6;
+        networkSeries.links.template.distance = 3.5;
+        networkSeries.links.template.adapter.add("strokeWidth", function(width, target) {
+            let from = target.source;
+            let to = target.target;
+            let widths = from.dataItem.dataContext.linkWidths;
+            if (widths && widths[to.dataItem.id]) {
+                return widths[to.dataItem.id];
+            }
+                return width;
+        });
+
+        networkSeries.links.template.tooltipText = "[bold]{source.label.currentText}[/] x [bold]{name}[/]：合作 [bold]{value}[/] 次";
+        networkSeries.links.template.interactionsEnabled = true;
+
+        var hoverState = networkSeries.links.template.states.create("hover");
+        //hoverState.properties.strokeWidth = 3;
+        hoverState.properties.strokeOpacity = 1;
+        hoverState.properties.stroke = am4core.color("#E82E8E");
+
+        networkSeries.nodes.template.events.on("over", function(event) {
+            /*event.target.dataItem.childLinks.each(function(link) {
+                console.log(5,link.target.dataItem.id);
+                link.isHover = true;
+            })
+            if (event.target.dataItem.parentLink) {
+                event.target.dataItem.parentLink.isHover = true;
+            }*/
+            //console.log(event.target.dataItem.id)
+            var node = event.target
+            networkSeries.links.each(function(link) {
+                if (link.source.label.currentText == node.dataItem.id) {
+                    link.isHover = true;
+                }
+                else if (link.target.label.currentText == node.dataItem.id) {
+                    link.isHover = true;
+                }
+            })
+        })
+
+        networkSeries.nodes.template.events.on("out", function(event) {
+            var node = event.target
+            networkSeries.links.each(function(link) {
+                if (link.source.label.currentText == node.dataItem.id) {
+                    link.isHover = false;
+                }
+                else if (link.target.label.currentText == node.dataItem.id) {
+                    link.isHover = false;
+                }
+            })
+        })
+
+        //Friction and mobility
+        networkSeries.events.on("inited", function() {
+            networkSeries.animate({
+                property: "velocityDecay",
+                to: 0.85  
+            }, 3000);
+        });
+
+        }); // end am4core.ready()    
+</script>
+</body>
+
+</html>
+
+
+
+
