@@ -4,7 +4,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Graph1</title>
-    <h3>G1 歷年熱門關鍵詞網絡：2019年前50大關鍵詞網絡</h3>
      
 	<!--import amCharts-->
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
@@ -43,6 +42,12 @@
             chart.hiddenState.properties.opacity = 0;
 
             chart.data = data
+            
+            var title = chart.titles.create();
+            title.text = "G1 歷年熱門關鍵詞網絡：2019年前50大關鍵詞網絡";
+            title.fontSize = 25;
+            title.marginTop = 20;
+            title.marginBottom = 25;
 
             //chart nodeColor
             var colorList = {
