@@ -41,10 +41,10 @@
             var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
             chart.hiddenState.properties.opacity = 0;
 
-            chart.data = data
+            chart.data = data[1]
             
             var title = chart.titles.create();
-            title.text = "G1 歷年熱門關鍵詞網絡：2019年前50大關鍵詞網絡";
+            title.text = data[0];
             title.fontSize = 25;
             title.marginTop = 20;
             title.marginBottom = 25;
