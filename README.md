@@ -16,14 +16,14 @@
 - 網頁視覺化範例：[/graph4/graph4](https://tsaijou.github.io/sna_network/graph4/graph4)
 - 網頁視覺化檔案：[/graph4/graph4.html](https://github.com/tsaijou/sna_network/blob/main/graph4/graph4.html)
 
-## Graph5
+## Graph5 工程學門之間的合作網絡
 - 網頁視覺化範例：[/graph5/graph5](https://tsaijou.github.io/sna_network/graph5/graph5)
 - 網頁視覺化檔案：[/graph5/graph5.html](https://github.com/tsaijou/sna_network/blob/main/graph5/graph5.html)
 
-## Graph6
+## Graph6 學者關係網絡
 - 網頁視覺化範例：[/graph6/graph6](https://tsaijou.github.io/sna_network/graph2/graph2)
 - 網頁視覺化檔案：[/graph6/graph62.html](https://github.com/tsaijou/sna_network/blob/main/graph6/graph6.html)
 
-## Graph7
+## Graph7 學者的關鍵詞文字雲
 - 網頁視覺化範例：[/graph7/graph7](https://tsaijou.github.io/sna_network/graph7/graph7)
 - 網頁視覺化檔案：[/graph7/graph7.html](https://github.com/tsaijou/sna_network/blob/main/graph7/graph7.html)
