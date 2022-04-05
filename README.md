@@ -1,4 +1,4 @@
-# sna_network 學研專家分析網絡
+# 學研專家分析網絡
 
 ## Graph1 歷年熱門關鍵詞網絡
 - 網頁視覺化範例：[/graph1/graph1](https://tsaijou.github.io/sna_network/graph1/graph1)
