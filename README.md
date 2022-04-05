@@ -7,7 +7,7 @@
 
 成果：將分析結果視覺化
 1. 分為7大主題，可依照設定輸入欲查詢的學者姓名、年分...等條件
-2. 靜態視覺化圖片利用python的**networkx套件**繪製，網頁視覺化利用**amCharts套件繪製**
+2. 靜態視覺化圖片利用python的**networkx套件**繪製，網頁視覺化利用**amCharts套件**繪製
 
 ## Graph1 歷年熱門關鍵詞網絡
 - 網頁視覺化範例：[/graph1/graph1](https://tsaijou.github.io/sna_network/graph1/graph1)
