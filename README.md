@@ -1,4 +1,6 @@
 # 學研專家分析網絡
+目標：利用工程中心與碩博士論文資料建立異質資訊網路，來表現學者(PI)與研究技術間的整體關係，更進而分析出熱門技術與學者社群
+
 
 ## Graph1 歷年熱門關鍵詞網絡
 - 網頁視覺化範例：[/graph1/graph1](https://tsaijou.github.io/sna_network/graph1/graph1)
