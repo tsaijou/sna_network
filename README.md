@@ -3,6 +3,7 @@
 
 說明：
 1. 碩博士論文資料：利用前項計畫主持人姓名，在碩博士論文網爬取該姓名擔任指導老師的論文資料
+  - 碩博士論文爬蟲檔案：[/project_code/thesesCrawler.py](https://github.com/tsaijou/sna_network/blob/main/project_code/thesesCrawler.py)
 2. 異質資訊網路：研究文獻中，學者姓名、文獻關鍵詞等不同類型資料(節點node)之間建立的關係(連線link)網絡
 
 成果：將分析結果視覺化
