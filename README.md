@@ -4,7 +4,7 @@
 說明：
 1. 碩博士論文資料：利用前項計畫主持人姓名，在碩博士論文網爬取該姓名擔任指導老師的論文資料
    - 碩博士論文爬蟲檔案：[/project_code/thesesCrawler.py](https://github.com/tsaijou/sna_network/blob/main/project_code/thesesCrawler.py)
-2. 異質資訊網路：研究文獻中，學者姓名、文獻關鍵詞等不同類型資料(節點node)之間建立的關係(連線link)網絡
+2. 異質資訊網路：每一篇研究文獻中(論文/計畫)，學者姓名、文獻關鍵詞等不同類型資料(節點node)之間建立的關係(連線link)網絡
  ![image](https://user-images.githubusercontent.com/54679167/162044453-dd6de77a-4f76-47f4-a6f9-9c1108d8398a.png)
 
 成果：將分析結果視覺化
@@ -12,6 +12,8 @@
 2. 靜態視覺化圖片利用python的**networkx套件**繪製，網頁視覺化利用**amCharts套件**繪製
 
 ## Graph1 歷年熱門關鍵詞網絡
+1. 呈現單一年份研究文獻中出現次數前幾名的關鍵詞，與關鍵詞之間的連結關係
+2. 篩選條件：年份、關鍵詞數量
 - 網頁視覺化範例：[/graph1/graph1](https://tsaijou.github.io/sna_network/graph1/graph1)
 - 網頁視覺化檔案：[/graph1/graph1.html](https://github.com/tsaijou/sna_network/blob/main/graph1/graph1.html)
 
