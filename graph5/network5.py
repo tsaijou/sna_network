@@ -21,7 +21,7 @@ time_draw = time.time()
 con_en = tools.dbConnectEngine(database)
 
 # 最低合作次數限制
-value = 200
+value = 0
 # 合作類型
 #relationship = "= 'pi-self'" #自我跨學門
 relationship = "<> 'pi-self'" #學者間跨學門
