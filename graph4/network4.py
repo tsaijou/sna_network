@@ -59,7 +59,7 @@ edge_colors = [value for (u, v, value) in G_disciplinekeywords.edges(G_disciplin
 edge_widths = [value/5 for (u, v, value) in G_disciplinekeywords.edges(G_disciplinekeywords, 'value')]
 ##設定學門(中心)、關鍵字(外圈)節點標籤
 labelKeywords = {n:n for n,lab in pos_s.items() if n not in dcp_round}
-labelCenter = {n:n for n,lab in pos_s.items() if n in dcp_round}
+labelCenter = {n:n.split("-")[1] for n,lab in pos_s.items() if n in dcp_round}
 ##中文設定
 matplotlib.rcParams['font.family']='SimSun'
 plt.figure(figsize=(14.2,11.2))
