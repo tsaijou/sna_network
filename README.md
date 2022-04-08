@@ -15,11 +15,17 @@
 ## Graph1 歷年熱門關鍵詞網絡
 1. 呈現碩博論文與科技部計畫中，熱門關鍵詞之間的關係強弱
 2. 篩選條件：年份 (ex.2019年)、關鍵詞數量 (ex.50個)
-- 網頁視覺化範例：[/graph1/graph1](https://tsaijou.github.io/sna_network/graph1/graph1)
-- 網頁視覺化檔案：[/graph1/graph1.html](https://github.com/tsaijou/sna_network/blob/main/graph1/graph1.html)
-- 靜態視覺化檔案：[/graph1/network1.py](https://github.com/tsaijou/sna_network/blob/main/graph1/network1.py)
-
-![image](https://user-images.githubusercontent.com/54679167/162351806-05a07315-56f6-4f1b-94ae-0e02ec57f30b.png)
+- 網頁視覺化
+   - 程式檔案：[/graph1/graph1.html](https://github.com/tsaijou/sna_network/blob/main/graph1/graph1.html)
+   - 網頁範例：[/graph1/graph1](https://tsaijou.github.io/sna_network/graph1/graph1)
+- 靜態圖片
+   - 程式檔案：[/graph1/network1.py](https://github.com/tsaijou/sna_network/blob/main/graph1/network1.py)
+   - 
+      <details><summary>圖片範例：2019年前50名關鍵詞</summary>
+        <div>
+            <img src="./graph1/image1.png" width="500px" height="420px">
+        </div>
+      </details>
 
 ## Graph2 重點技術學者查詢
 1. 呈現文獻中使用研究技術 (關鍵詞) 篇數最多的前10名學者，以及每位學者在文獻中使用次數最多的前5個關鍵詞
