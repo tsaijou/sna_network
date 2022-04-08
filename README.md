@@ -19,6 +19,8 @@
 - 網頁視覺化檔案：[/graph1/graph1.html](https://github.com/tsaijou/sna_network/blob/main/graph1/graph1.html)
 - 靜態視覺化檔案：[/graph1/network1.py](https://github.com/tsaijou/sna_network/blob/main/graph1/network1.py)
 
+![image](https://user-images.githubusercontent.com/54679167/162351806-05a07315-56f6-4f1b-94ae-0e02ec57f30b.png)
+
 ## Graph2 重點技術學者查詢
 1. 呈現文獻中使用研究技術 (關鍵詞) 篇數最多的前10名學者，以及每位學者在文獻中使用次數最多的前5個關鍵詞
 2. 篩選條件：關鍵詞 (ex.深度學習)、年份區間 (ex.2011~2016年)
