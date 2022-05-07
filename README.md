@@ -41,6 +41,7 @@
             <img src="./graph2/image2.png" width="700px" height="560px">
         </div>
       </details>
+     
 ## Graph3 研究技術 (關鍵詞) 網絡
 1. 呈現碩博論文與科技部計畫中，與研究技術 (關鍵詞) 較相關的30個關鍵詞及之間的關係
 2. 篩選條件：關鍵詞 (ex.再生能源)
@@ -55,6 +56,7 @@
             <img src="./graph3/image3.png" width="700px" height="450px">
         </div>
       </details>
+      
 ## Graph4 工程學門研究技術網絡
 1. 科技部計畫中，所屬學門計畫的熱門關鍵詞 (使用次數前25名) 及之間的關係
 2. 篩選條件：2個工程學門 (ex.微電子工程、資訊工程(資訊))
@@ -69,6 +71,7 @@
             <img src="./graph4/image4.png" width="680px" height="560px">
         </div>
       </details>
+      
 ## Graph5 工程學門之間的合作網絡
 1. 呈現19個科技部工程學門透過計畫主持人之間合作產生的強弱關係
 2. 篩選條件：最低合作次數 (ex.至少合作10次)
@@ -83,6 +86,7 @@
             <img src="./graph5/image5.png" width="680px" height="560px">
         </div>
       </details>
+      
 ## Graph6 學者關係網絡
 1. 呈現學者間的合作關係強弱
 2. 篩選條件：姓名 (ex.鄧維光)、年份區間 (ex.2010~2018年)、學者關係 (ex.指導老師&口試委員)
@@ -97,6 +101,7 @@
             <img src="./graph6/image6.png" width="700px" height="450px">
         </div>
       </details>
+      
 ## Graph7 學者的關鍵詞文字雲
 1. 呈現學者在碩博論文與科技部計畫中，經常使用的關鍵詞
 2. 篩選條件：姓名 (ex.陳彥宏)、年份區間 (ex.2010~2018年)
