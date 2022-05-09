@@ -33,17 +33,17 @@
 
 
 
-### 三、視覺化範例
+### 三、SNA視覺化範例模板
 #### Graph1 歷年熱門關鍵詞網絡
 1. 呈現碩博論文與科技部計畫中，熱門關鍵詞之間的關係強弱
 2. 篩選條件：年份 (ex.2019年)、關鍵詞數量 (ex.50個)
 - `網頁視覺化`
-   - 程式檔案：[/visualization/graph1/graph1.html](https://github.com/tsaijou/sna_network/blob/main/visualization/graph1/graph1.html)
-   - 網頁範例：[/visualization/graph1/graph1](https://tsaijou.github.io/sna_network/visualization/graph1/graph1)
+   - 程式檔案：[graph1.html](https://github.com/tsaijou/sna_network/blob/main/visualization/graph1/graph1.html)
+   - 網頁範例：[graph1](https://tsaijou.github.io/sna_network/visualization/graph1/graph1)
 - `靜態圖片`
-   - 程式檔案：[/visualization/graph1/network1.py](https://github.com/tsaijou/sna_network/blob/main/visualization/graph1/network1.py)
+   - 程式檔案：[network1.py](https://github.com/tsaijou/sna_network/blob/main/visualization/graph1/network1.py)
    
-      <details><summary>圖片範例：2019年前50名關鍵詞</summary>
+      <details><summary>圖片範例：2019年前50名關鍵詞 (點擊展開)</summary>
         <div>
             <img src="./visualization/graph1/image1.png" width="700px" height="560px">
         </div>
@@ -53,14 +53,14 @@
 1. 呈現文獻中使用研究技術 (關鍵詞) 篇數最多的前10名學者，以及每位學者在文獻中使用次數最多的前5個關鍵詞
 2. 篩選條件：關鍵詞 (ex.深度學習)、年份區間 (ex.2011~2016年)
 - `網頁視覺化`
-   - 程式檔案：[/graph2/graph2.html](https://github.com/tsaijou/sna_network/blob/main/graph2/graph2.html)
-   - 網頁範例：[/graph2/graph2](https://tsaijou.github.io/sna_network/graph2/graph2)
+   - 程式檔案：[graph2.html](https://github.com/tsaijou/sna_network/blob/main/visualization//graph2/graph2.html)
+   - 網頁範例：[graph2](https://tsaijou.github.io/sna_network/visualization//graph2/graph2)
 - `靜態圖片`
-   - 程式檔案：[/graph2/network2.py](https://github.com/tsaijou/sna_network/blob/main/graph2/network2.py)
+   - 程式檔案：[network2.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph2/network2.py)
    
-      <details><summary>圖片範例：2012年~2016年論文或計畫中使用關鍵詞「深度學習」最多次的學者與其研究領域</summary>
+      <details><summary>圖片範例：2012年~2016年論文或計畫中使用關鍵詞「深度學習」最多次的學者與其研究領域 (點擊展開)</summary>
         <div>
-            <img src="./graph2/image2.png" width="700px" height="560px">
+            <img src="./visualization//graph2/image2.png" width="700px" height="560px">
         </div>
       </details>
      
@@ -68,14 +68,14 @@
 1. 呈現碩博論文與科技部計畫中，與研究技術 (關鍵詞) 較相關的30個關鍵詞及之間的關係
 2. 篩選條件：關鍵詞 (ex.再生能源)
 - `網頁視覺化`
-   - 程式檔案：[/graph3graph3.html](https://github.com/tsaijou/sna_network/blob/main/graph3/graph3.html)
-   - 網頁範例：[/graph3/graph3](https://tsaijou.github.io/sna_network/graph3/graph3)
+   - 程式檔案：[graph3.html](https://github.com/tsaijou/sna_network/blob/main/visualization//graph3/graph3.html)
+   - 網頁範例：[graph3](https://tsaijou.github.io/sna_network/visualization//graph3/graph3)
 - `靜態圖片`
-   - 程式檔案：[/graph3/network3.py](https://github.com/tsaijou/sna_network/blob/main/graph3/network3.py)
+   - 程式檔案：[network3.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph3/network3.py)
    
-      <details><summary>圖片範例：「再生能源」領域研究技術網絡</summary>
+      <details><summary>圖片範例：「再生能源」領域研究技術網絡 (點擊展開)</summary>
         <div>
-            <img src="./graph3/image3.png" width="700px" height="450px">
+            <img src="./visualization//graph3/image3.png" width="700px" height="450px">
         </div>
       </details>
       
@@ -83,14 +83,14 @@
 1. 科技部計畫中，所屬學門計畫的熱門關鍵詞 (使用次數前25名) 及之間的關係
 2. 篩選條件：2個工程學門 (ex.微電子工程、資訊工程(資訊))
 - `網頁視覺化`
-   - 程式檔案：[/graph4/graph4.html](https://github.com/tsaijou/sna_network/blob/main/graph4/graph4.html)
-   - 網頁範例：[/graph4/graph4](https://tsaijou.github.io/sna_network/graph4/graph4)
+   - 程式檔案：[graph4.html](https://github.com/tsaijou/sna_network/blob/main/visualization//graph4/graph4.html)
+   - 網頁範例：[graph4](https://tsaijou.github.io/sna_network/visualization//graph4/graph4)
 - `靜態圖片`
-   - 程式檔案：[/graph4/network4.py](https://github.com/tsaijou/sna_network/blob/main/graph4/network4.py)
+   - 程式檔案：[network4.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph4/network4.py)
    
-      <details><summary>圖片範例：「資訊工程(資訊) & 微電子工程」學門重點關鍵詞</summary>
+      <details><summary>圖片範例：「資訊工程(資訊) & 微電子工程」學門重點關鍵詞 (點擊展開)</summary>
         <div>
-            <img src="./graph4/image4.png" width="680px" height="560px">
+            <img src="./visualization//graph4/image4.png" width="680px" height="560px">
         </div>
       </details>
       
@@ -98,14 +98,14 @@
 1. 呈現19個科技部工程學門透過計畫主持人之間合作產生的強弱關係
 2. 篩選條件：最低合作次數 (ex.至少合作10次)
 - `網頁視覺化`
-   - 程式檔案：[/graph5/graph5.html](https://github.com/tsaijou/sna_network/blob/main/graph5/graph5.html)
-   - 網頁範例：[/graph5/graph5](https://tsaijou.github.io/sna_network/graph5/graph5)
+   - 程式檔案：[graph5.html](https://github.com/tsaijou/sna_network/blob/main/visualization//graph5/graph5.html)
+   - 網頁範例：[graph5](https://tsaijou.github.io/sna_network/visualization//graph5/graph5)
 - `靜態圖片`
-   - 程式檔案：[/graph5/network5.py](https://github.com/tsaijou/sna_network/blob/main/graph5/network5.py)
+   - 程式檔案：[network5.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph5/network5.py)
    
-      <details><summary>圖片範例：不同計畫主持人間跨學門合作關係</summary>
+      <details><summary>圖片範例：不同計畫主持人間跨學門合作關係 (點擊展開)</summary>
         <div>
-            <img src="./graph5/image5.png" width="680px" height="560px">
+            <img src="./visualization//graph5/image5.png" width="680px" height="560px">
         </div>
       </details>
       
@@ -113,14 +113,14 @@
 1. 呈現學者間的合作關係強弱
 2. 篩選條件：姓名 (ex.鄧維光)、年份區間 (ex.2010~2018年)、學者關係 (ex.指導老師&口試委員)
 - `網頁視覺化`
-   - 程式檔案：[/graph6/graph6.html](https://github.com/tsaijou/sna_network/blob/main/graph6/graph6.html)
-   - 網頁範例：[/graph6/graph6](https://tsaijou.github.io/sna_network/graph6/graph6)
+   - 程式檔案：[graph6.html](https://github.com/tsaijou/sna_network/blob/main/visualization//graph6/graph6.html)
+   - 網頁範例：[graph6](https://tsaijou.github.io/sna_network/visualization//graph6/graph6)
 - `靜態圖片`
-   - 程式檔案：[/graph6/network6.py](https://github.com/tsaijou/sna_network/blob/main/graph6/network6.py)
+   - 程式檔案：[network6.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph6/network6.py)
    
       <details><summary>圖片範例：2010年~2018年間與「鄧維光」合作的學者</summary>
         <div>
-            <img src="./graph6/image6.png" width="700px" height="450px">
+            <img src="./visualization//graph6/image6.png" width="700px" height="450px">
         </div>
       </details>
       
@@ -128,14 +128,14 @@
 1. 呈現學者在碩博論文與科技部計畫中，經常使用的關鍵詞
 2. 篩選條件：姓名 (ex.陳彥宏)、年份區間 (ex.2010~2018年)
 - `網頁視覺化`
-   - 程式檔案：[/graph7/graph7.html](https://github.com/tsaijou/sna_network/blob/main/graph7/graph7.html)
-   - 網頁範例：[/graph7/graph7](https://tsaijou.github.io/sna_network/graph7/graph7)
+   - 程式檔案：[graph7.html](https://github.com/tsaijou/sna_network/blob/main/visualization//graph7/graph7.html)
+   - 網頁範例：[graph7](https://tsaijou.github.io/sna_network/visualization//graph7/graph7)
 - `靜態圖片`
-   - 程式檔案：[/graph7/network7.py](https://github.com/tsaijou/sna_network/blob/main/graph7/network7.py)
+   - 程式檔案：[network7.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph7/network7.py)
    
-      <details><summary>圖片範例：「陳彥宏」學者於2011~2020年的關鍵詞文字雲</summary>
+      <details><summary>圖片範例：「陳彥宏」學者於2011~2020年的關鍵詞文字雲 (點擊展開)</summary>
         <div>
-            <img src="./graph7/image7.png">
+            <img src="./visualization//graph7/image7.png">
         </div>
       </details>
  
