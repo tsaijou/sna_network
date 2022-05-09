@@ -6,9 +6,9 @@
 **說明：**
 
 1. 科技部計畫清單：由工程中心提供的excel檔
-   - 科技部計畫清單存入資料庫程式：
+   - 科技部計畫清單存入資料庫程式：[projectList2DB.py](https://github.com/tsaijou/sna_network/blob/main/project_code/projectList2DB.py)
 2. 碩博士論文資料：利用前項計畫主持人姓名，在碩博士論文網爬取該姓名擔任指導老師的論文資料
-   - 碩博士論文爬蟲程式：[/project_code/thesesCrawler.py](https://github.com/tsaijou/sna_network/blob/main/project_code/thesesCrawler.py)
+   - 碩博士論文爬蟲程式：[thesesCrawler.py](https://github.com/tsaijou/sna_network/blob/main/project_code/thesesCrawler.py)
 3. 異質資訊網路：每一篇研究文獻中 (論文/計畫)，學者姓名、文獻關鍵詞等不同類型資料 (節點node) 之間建立的關係 (連線link) 網絡
 
  ![image](https://user-images.githubusercontent.com/54679167/162044453-dd6de77a-4f76-47f4-a6f9-9c1108d8398a.png)
@@ -25,7 +25,7 @@
     
    **步驟1.** 科技部計畫清單資料存於4個資料表：`project_rawdata`經過中文關鍵詞清理與**身份辨識**(個資&計畫標題)，將計畫與PI資料分存入`project_info`、`project_researcher_info`；新PI姓名存入`thesis_crawler_log`
    - 身份辨識方法(同名同姓PI)：利用計畫清單中的個資(申請單位、e-mail、電話)辨識，再與科技部人才查詢網頁中PI執行過的計畫標題比對後確認身份
-      - 科技部人才查詢網頁爬蟲程式：
+      - 科技部人才查詢網頁爬蟲程式：[mostScholarCrawler.py](https://github.com/tsaijou/sna_network/blob/main/project_code/mostScholarCrawler.py)
    
    **步驟2.** 根據thesis_crawler_log中的PI姓名作為指導教授姓名進行碩博士論文資料爬取，存入`thesis_rawdata`
    
