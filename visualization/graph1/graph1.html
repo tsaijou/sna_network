@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Graph1</title>
+     
+	<!--import amCharts-->
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>   
+    <style>
+        #chartdiv {
+          width: 100%;
+          height: 600px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="list"></div>
+	<div id="chartdiv"></div>
+    <!--function-->
+    <script>
+        // 先顯示載入中的訊息
+        let list=document.getElementById("list");
+            list.innerHTML="... Loading ...";
+        
+        // 透過網址取得伺服器端提供的 JSON 格式資料
+		fetch("https://tsaijou.github.io/sna_network/graph1/data1.json").then(function(response){
+			return response.json();
+		}).then(function(data){
+			// 先清空畫面
+			list.innerHTML="";
+            
+            am4core.ready(function() {
+
+            // Themes begin
+            am4core.useTheme(am4themes_animated);
+            // Themes end
+
+            var chart = am4core.create("chartdiv", am4charts.ChordDiagram);
+            chart.hiddenState.properties.opacity = 0;
+
+            chart.data = data[1]
+            
+            var title = chart.titles.create();
+            title.text = data[0].title;
+            title.fontSize = 25;
+            title.marginTop = 20;
+            title.marginBottom = 25;
+
+            //chart nodeColor
+            var colorList = {
+                0:"#711083", 
+                1:"#9B359C", 
+                2:"#CC3BA1", 
+                3:"#F06AB6",
+                4:"#FFA6D8"
+            };
+
+            for (var i = 0; i < 50; i++) {
+                var rank = chart.data[i].rank;
+                var n = Math.floor(rank/10);
+                chart.data[i].nodeColor = am4core.color(colorList[n]).lighten(((rank%10)*0.025)+0.15)
+                
+            };
+            //console.log(chart.data);
+
+            chart.dataFields.fromName = "from";
+            chart.dataFields.toName = "to";
+            chart.dataFields.value = "value";
+            chart.dataFields.color = "nodeColor";
+            chart.nonRibbon = true;
+            chart.startAngle = -93;
+            chart.endAngle = 267;
+
+            var nodeTemplate = chart.nodes.template;
+            nodeTemplate.fillOpacity = 0.55;
+            nodeTemplate.slice.disabled = true;
+            nodeTemplate.setStateOnChildren = true;
+            nodeTemplate.label.disabled = true;
+            nodeTemplate.togglable = false;
+            nodeTemplate.clickable = false;
+            nodeTemplate.draggable = false;
+
+            //游標移動到節點時產生的文字框
+            nodeTemplate.readerTitle = "文獻篇數：{count}";
+            nodeTemplate.showSystemTooltip = true;
+
+            //游標移動到節點時的顏色、透明度變化
+            var hoverState = nodeTemplate.states.create("hover");
+            //hoverState.properties.fill = "#BD4F6C";
+            hoverState.properties.fillOpacity = 0.85;
+
+            var linkTemplate = chart.links.template;
+            linkTemplate.opacity = 0.2;
+            linkTemplate.strokeWidth = 0.6;
+            linkTemplate.defaultState.properties.opacity = 0.1;
+            linkTemplate.tooltipText = "";
+            linkTemplate.readerTitle = "{from} x {to}：合作{value}次";
+            linkTemplate.showSystemTooltip = true;
+
+            var linkHoverState = linkTemplate.states.create("hover");
+            linkHoverState.properties.opacity = 1;
+            linkHoverState.properties.strokeWidth = 1.5;
+            linkHoverState.properties.fill = am4core.color("#7B3E8B");
+
+            nodeTemplate.events.on("over", function (event) {
+                var node = event.target;
+                node.outgoingDataItems.each(function (dataItem) {
+                    dataItem.link.isHover = true;
+                })
+            })
+
+            nodeTemplate.events.on("out", function (event) {
+                var node = event.target;
+                node.outgoingDataItems.each(function (dataItem) {
+                    dataItem.link.isHover = false;
+                })
+            })
+
+            nodeTemplate.cursorOverStyle = am4core.MouseCursorStyle.grab;
+
+            nodeTemplate.cursorDownStyle = am4core.MouseCursorStyle.grabbing;
+
+            var circleBullet = nodeTemplate.createChild(am4charts.CircleBullet);
+            circleBullet.setStateOnChildren = true;
+            circleBullet.circle.radius = 10;
+
+            var circleHoverState = circleBullet.states.create("hover");
+            circleHoverState.properties.scale = 2;
+
+            // we create a separate label as node.label ispositioned differently and doesn"t fit perfectly for one-letter labels
+            var label = circleBullet.createChild(am4core.Label);
+            label.text = "{name}";
+            label.fontSize = 9;
+            label.fontWeight = "bold"
+            label.fill = am4core.color("black");
+            label.horizontalCenter = "middle";
+            label.verticalCenter = "middle";
+
+            var labelHoverState = label.states.create("hover");
+            labelHoverState.properties.fill = am4core.color("black");
+
+            }); // end am5.ready()
+
+		});
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
