@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Graph7</title>
+     
+	<!--import amCharts-->
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/wc.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<!--繁體中文設定-->
+<script src="https://cdn.amcharts.com/lib/5/fonts/notosans-tc.js"></script>    
+    <style>
+        #chartdiv {
+          width: 100%;
+          height: 650px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="list"></div>
+	<div id="chartdiv"></div>
+    
+    <!--function-->
+    <script>
+        // 先顯示載入中的訊息
+        let list=document.getElementById("list");
+            list.innerHTML="... Loading ...";
+        
+        // 透過網址取得伺服器端提供的 JSON 格式資料
+		fetch("https://tsaijou.github.io/sna_network/graph7/data7.json").then(function(response){
+			return response.json();
+		}).then(function(data){
+			// 先清空畫面
+			list.innerHTML="";
+
+            am5.ready(function() {
+
+            // Create root element
+            // https://www.amcharts.com/docs/v5/getting-started/#Root_element
+            var root = am5.Root.new("chartdiv");
+
+            // Set themes
+            // https://www.amcharts.com/docs/v5/concepts/themes/
+            root.setThemes([
+            am5themes_Animated.new(root)
+            ]);
+            
+            // Add wrapper container
+            var container = root.container.children.push(am5.Container.new(root, {
+                width: am5.percent(100),
+                height: am5.percent(100),
+                layout: root.verticalLayout
+            }));
+
+            // Set title
+            var title = container.children.push(am5.Label.new(root, {
+                text: data[0].title,
+                fontSize: 25,
+                x: am5.percent(50),
+                centerX: am5.percent(50)
+            }));
+            
+
+            // Add series
+            // https://www.amcharts.com/docs/v5/charts/word-cloud/
+            var series = container.children.push(am5wc.WordCloud.new(root, {
+                categoryField: "tag",
+                valueField: "weight",
+                calculateAggregates: true // this is needed for heat rules to work
+            }));
+
+
+            // Set up heat rules
+            // https://www.amcharts.com/docs/v5/charts/word-cloud/#Via_heat_rules
+            series.set("heatRules", [{
+                target: series.labels.template,
+                dataField: "value",
+                min: am5.color(0xFFD4C2),
+                max: am5.color(0xFF621F),
+                key: "fill"
+            }]);
+
+            // Configure labels
+            //font-family: https://blog.ja-anything.com/2016/11/25/css-%E5%B8%B8%E7%94%A8%E4%B8%AD%E6%96%87%E5%AD%97%E5%9E%8B-traditional-chinese-font-family/
+            series.labels.template.setAll({
+                paddingTop: 5,
+                paddingBottom: 5,
+                paddingLeft: 5,
+                paddingRight: 5,
+                fontFamily: "serif",  
+                cursorOverStyle: "pointer"
+            });
+
+
+            // Data from:
+            // https://insights.stackoverflow.com/survey/2021#section-most-popular-technologies-programming-scripting-and-markup-languages
+            series.data.setAll(data[1]);
+            
+            series.labels.template.set("tooltipText", "[bold]{category}[/]使用次數：[bold]{value}[/]次");
+
+            }); // end am5.ready()
+        });
+    </script>
+</body>
+
+</html>
+
+
+
+
