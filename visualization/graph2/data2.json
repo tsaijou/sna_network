@@ -1,0 +1,110 @@
+[
+    {
+        "title":"G2 重點技術學者查詢：2012年~2016年論文或計畫中使用關鍵詞「深度學習」最多次的學者與其研究領域"
+    },
+    [{    
+        "name":"深度學習", "value":40, "neighbors":10, 
+        "children":[
+        {
+            "name":"張寶基", "value":9, "linkWidth":6.00, 
+            "children":[
+                {"name":"壓縮域", "value":6, "linkWidth":4.00},
+                {"name":"編碼單位", "value":6, "linkWidth":4.00},
+                {"name":"快速演算法", "value":5, "linkWidth":3.33},
+                {"name":"HEVC", "value":5, "linkWidth":3.33},
+                {"name":"類神經網路", "value":4, "linkWidth":2.67}
+            ]
+        },
+        {
+            "name":"郭峻因", "value":2, "linkWidth":1.33, 
+            "children":[
+                {"name":"形狀偵測", "value":2, "linkWidth":1.33},
+                {"name":"車輛偵測", "value":2, "linkWidth":1.33},
+                {"name":"色調對應", "value":2, "linkWidth":1.33},
+                {"name":"車道偏移警示", "value":2, "linkWidth":1.33},
+                {"name":"高效能視訊編碼", "value":2, "linkWidth":1.33}
+            ]
+        },
+        {
+            "name":"簡鳳村", "value":3, "linkWidth":2.00, 
+            "children":[
+                {"name":"模式選擇", "value":2, "linkWidth":1.33},
+                {"name":"卷積神經網路", "value":2, "linkWidth":1.33},
+                {"name":"k平均數叢聚", "value":1, "linkWidth":0.67},
+                {"name":"同時無線訊號與功率傳輸", "value":1, "linkWidth":0.67},
+                {"name":"限制性波茲曼機", "value":1, "linkWidth":0.67}
+            ]
+        },
+        {
+            "name":"徐宏民", "value":3, "linkWidth":2.00, 
+            "children":[
+                {"name":"人臉屬性偵測", "value":3, "linkWidth":2.00},
+                {"name":"卷積神經網路", "value":3, "linkWidth":2.00},
+                {"name":"影像標註", "value":3, "linkWidth":2.00},
+                {"name":"第一人稱視角影片", "value":2, "linkWidth":1.33},
+                {"name":"影像搜尋", "value":2, "linkWidth":1.33}
+            ]
+        },
+        {
+            "name":"花凱龍", "value":3, "linkWidth":2.00, 
+            "children":[
+                {"name":"影像融合", "value":4, "linkWidth":2.67},
+                {"name":"背景擷取", "value":3, "linkWidth":2.00},
+                {"name":"影像辨識", "value":2, "linkWidth":1.33},
+                {"name":"深度影像", "value":2, "linkWidth":1.33},
+                {"name":"條件隨機場", "value":2, "linkWidth":1.33}
+            ]
+        },
+        {
+            "name":"王聖智", "value":4, "linkWidth":2.67, 
+            "children":[
+                {"name":"手勢辨識", "value":3, "linkWidth":2.00},
+                {"name":"卷積神經網路", "value":2, "linkWidth":1.33},
+                {"name":"語意分割", "value":2, "linkWidth":1.33},
+                {"name":"影像分割", "value":2, "linkWidth":1.33},
+                {"name":"對焦估測", "value":1, "linkWidth":0.67}
+            ]
+        },
+        {
+            "name":"盧天麒", "value":2, "linkWidth":1.33, 
+            "children":[
+                {"name":"角色動畫", "value":8, "linkWidth":5.33},
+                {"name":"動作追蹤", "value":3, "linkWidth":2.00},
+                {"name":"無標記式動作擷取", "value":2, "linkWidth":1.33},
+                {"name":"無標記式動作追蹤", "value":2, "linkWidth":1.33},
+                {"name":"反向運動學", "value":2, "linkWidth":1.33}
+            ]
+        },
+        {
+            "name":"許秋婷", "value":5, "linkWidth":3.33, 
+            "children":[
+                {"name":"非負矩陣分解", "value":2, "linkWidth":1.33},
+                {"name":"場景分析", "value":2, "linkWidth":1.33},
+                {"name":"商品辨識", "value":2, "linkWidth":1.33},
+                {"name":"去霧", "value":2, "linkWidth":1.33},
+                {"name":"人臉特徵點偵測", "value":2, "linkWidth":1.33}
+            ]
+        },
+        {
+            "name":"賴尚宏", "value":3, "linkWidth":2.00, 
+            "children":[
+                {"name":"手勢辨識", "value":2, "linkWidth":1.33},
+                {"name":"影像處理", "value":2, "linkWidth":1.33},
+                {"name":"視線估測", "value":2, "linkWidth":1.33},
+                {"name":"物件偵測", "value":2, "linkWidth":1.33},
+                {"name":"動作辨識", "value":2, "linkWidth":1.33}
+            ]
+        },
+        {
+            "name":"徐繼聖", "value":3, "linkWidth":2.00, 
+            "children":[
+                {"name":"表情辨識", "value":3, "linkWidth":2.00},
+                {"name":"年齡估測", "value":3, "linkWidth":2.00},
+                {"name":"人臉辨識", "value":3, "linkWidth":2.00},
+                {"name":"車牌偵測", "value":3, "linkWidth":2.00},
+                {"name":"車牌辨識", "value":3, "linkWidth":2.00}
+            ]
+        }
+        ]
+    }]
+]
