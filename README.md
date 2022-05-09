@@ -18,8 +18,11 @@
 2. 靜態視覺化圖片利用python的**networkx套件**繪製，網頁視覺化利用**amCharts套件**繪製
 
 ### 二、資料處理流程流程
-1. 原始資料：(PI=計畫主持人)
-
+1. **原始資料：**(PI=計畫主持人)
+    <div>
+        <img src="./image/dataprocess.png" width="700px" height="200px">
+    </div>
+    
    **步驟1.** 科技部計畫清單資料存於4個資料表：`project_rawdata`經過中文關鍵詞清理與**身份辨識**(個資&計畫標題)，將計畫與PI資料分存入`project_info`、`project_researcher_info`；新PI姓名存入`thesis_crawler_log`
    - 身份辨識方法(同名同姓PI)：利用計畫清單中的個資(申請單位、e-mail、電話)辨識，再與科技部人才查詢網頁中PI執行過的計畫標題比對後確認身份
       - 科技部人才查詢網頁爬蟲程式：
@@ -30,8 +33,8 @@
 
    **步驟4.** 以大專校院教師資料為基準，與project_researcher_info資料進行比對，若有相符，則納入`scholar_info`
 
-
-
+    
+2. **繪圖資料：**
 
 ### 三、SNA視覺化範例模板
 #### Graph1 歷年熱門關鍵詞網絡
@@ -118,7 +121,7 @@
 - `靜態圖片`
    - 程式檔案：[network6.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph6/network6.py)
    
-      <details><summary>圖片範例：2010年~2018年間與「鄧維光」合作的學者</summary>
+      <details><summary>圖片範例：2010年~2018年間與「鄧維光」合作的學者 (點擊展開)</summary>
         <div>
             <img src="./visualization//graph6/image6.png" width="700px" height="450px">
         </div>
