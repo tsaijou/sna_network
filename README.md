@@ -38,7 +38,7 @@
    - 6張繪圖資料表分別統計不同的節點與連線組合(grapg_)，用於繪製7種類型網絡圖
    
        <div>
-           <img src="./image/graphtables.png" width="750px" height="250px">
+           <img src="./image/graphtables.png" width="650px" height="220px">
        </div>
     
 ### 三、SNA視覺化範例模板
