@@ -9,7 +9,7 @@
    - 科技部計畫清單存入資料庫程式：[projectList2DB.py](https://github.com/tsaijou/sna_network/blob/main/project_code/projectList2DB.py)
 2. 碩博士論文資料：利用前項計畫主持人姓名，在碩博士論文網爬取該姓名擔任指導老師的論文資料
    - 碩博士論文爬蟲程式：[thesesCrawler.py](https://github.com/tsaijou/sna_network/blob/main/project_code/thesesCrawler.py)
-3. 異質資訊網路：每一篇研究文獻中 (論文/計畫)，學者姓名、文獻關鍵詞等不同類型資料 (節點node) 之間建立的關係 (連線link) 網絡
+3. 異質資訊網路：每一篇研究文獻中 (論文/計畫)，學者姓名、文獻關鍵詞等不同類型資料 `(節點node)` 之間建立的關係 `(連線link)` 網絡
 
  ![image](https://user-images.githubusercontent.com/54679167/162044453-dd6de77a-4f76-47f4-a6f9-9c1108d8398a.png)
 
@@ -32,10 +32,15 @@
    **步驟3.** thesis_rawdata經過中文關鍵詞清理與年份判定後存入`thesis_info`，指導老師資料存入`thesis_advisor_info`，新指導老師姓名存入thesis_crawler_log
 
    **步驟4.** 以大專校院教師資料為基準，與project_researcher_info資料進行比對，若有相符，則納入`scholar_info`
-
     
-2. **繪圖資料：**
-
+2. **繪圖資料表：**
+   - 提取視覺化所需資料，轉換資料型態為構成網絡圖的**節點**與**連線**，另外儲存為繪圖專用資料表，以節省每次繪圖所需的資料篩選、格式轉換與資料分析的時間
+   - 6張繪圖資料表，分別統計不同的節點與連線組合，用於繪製7種類型網絡圖
+   
+       <div>
+           <img src="./image/graphtables.png" width="750px" height="250px">
+       </div>
+    
 ### 三、SNA視覺化範例模板
 #### Graph1 歷年熱門關鍵詞網絡
 1. 呈現碩博論文與科技部計畫中，熱門關鍵詞之間的關係強弱
