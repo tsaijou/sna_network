@@ -54,7 +54,7 @@
 - `靜態圖片`
    - 程式檔案：[network1.py](https://github.com/tsaijou/sna_network/blob/main/visualization/graph1/network1.py)
    
-      <details><summary>圖片範例(點擊展開)：2019年前50名關鍵詞 </summary>
+      <details><summary>圖片範例 (點擊展開)： 2019年前50名關鍵詞 </summary>
         <div>
             <img src="./visualization/graph1/image1.png" width="700px" height="560px">
         </div>
@@ -69,7 +69,7 @@
 - `靜態圖片`
    - 程式檔案：[network2.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph2/network2.py)
    
-      <details><summary>圖片範例：2012年~2016年論文或計畫中使用關鍵詞「深度學習」最多次的學者與其研究領域 (點擊展開)</summary>
+      <details><summary>圖片範例 (點擊展開)： 2012年~2016年論文或計畫中使用關鍵詞「深度學習」最多次的學者與其研究領域 </summary>
         <div>
             <img src="./visualization//graph2/image2.png" width="700px" height="560px">
         </div>
@@ -99,7 +99,7 @@
 - `靜態圖片`
    - 程式檔案：[network4.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph4/network4.py)
    
-      <details><summary>圖片範例(點擊展開)：「資訊工程(資訊) & 微電子工程」學門重點關鍵詞 </summary>
+      <details><summary>圖片範例 (點擊展開)： 「資訊工程(資訊) & 微電子工程」學門重點關鍵詞 </summary>
         <div>
             <img src="./visualization//graph4/image4.png" width="680px" height="560px">
         </div>
@@ -114,7 +114,7 @@
 - `靜態圖片`
    - 程式檔案：[network5.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph5/network5.py)
    
-      <details><summary>圖片範例(點擊展開)：不同計畫主持人間跨學門合作關係 </summary>
+      <details><summary>圖片範例 (點擊展開)： 不同計畫主持人間跨學門合作關係 </summary>
         <div>
             <img src="./visualization//graph5/image5.png" width="680px" height="560px">
         </div>
@@ -144,7 +144,7 @@
 - `靜態圖片`
    - 程式檔案：[network7.py](https://github.com/tsaijou/sna_network/blob/main/visualization//graph7/network7.py)
    
-      <details><summary>圖片範例(點擊展開)：「陳彥宏」學者於2011~2020年的關鍵詞文字雲 </summary>
+      <details><summary>圖片範例 (點擊展開)： 「陳彥宏」學者於2011~2020年的關鍵詞文字雲 </summary>
         <div>
             <img src="./visualization//graph7/image7.png">
         </div>
